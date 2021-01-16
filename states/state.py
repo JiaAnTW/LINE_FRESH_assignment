@@ -7,5 +7,6 @@ class State(ABC):
     def get_msg(self):
         pass
 
+    @abstractmethod
     def get_next_state(self):
         pass
