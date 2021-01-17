@@ -1,8 +1,8 @@
-from states.state import State
+from states import state, experienceState
 from linebot.models import MessageTemplateAction, ButtonsTemplate, TemplateSendMessage
 
 
-class IndexState(State):
+class IndexState(state.State):
     def __init__(self):
         self._msg = TemplateSendMessage(
             alt_text='張家銨 LINE FRESH',
@@ -31,4 +31,7 @@ class IndexState(State):
         return self._msg
 
     def get_next_state_by_reply(self, user_reply):
+        print("user reply is" + user_reply)
+        if user_reply == '經歷/Experience':
+            return experienceState.ExperienceState()
         return IndexState()
