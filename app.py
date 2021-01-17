@@ -51,7 +51,8 @@ def callback():
         if not isinstance(event.message, TextMessage):
             continue
 
-        controller.send_msg(event.reply_token)
+        controller.send_msg(reply_token=event.reply_token,
+                            reply_text=event.message.text)
 
     return "OK"
 

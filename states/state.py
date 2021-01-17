@@ -8,5 +8,5 @@ class State(ABC):
         pass
 
     @abstractmethod
-    def get_next_state(self):
+    def get_next_state_by_reply(self):
         pass
