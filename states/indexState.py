@@ -31,7 +31,8 @@ class IndexState(state.State):
         return self._msg
 
     def get_next_state_by_reply(self, user_reply):
-        print("user reply is" + user_reply)
         if user_reply == '經歷/Experience':
-            return experienceState.ExperienceState()
+            return experienceState.ExperienceState("./wording/experience.json")
+        elif user_reply == '作品集/Project':
+            return experienceState.ExperienceState("./wording/project.json")
         return IndexState()
