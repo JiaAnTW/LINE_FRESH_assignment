@@ -8,7 +8,7 @@ def createCarouselMsg(msgArr):
             CarouselColumn(
                 thumbnail_image_url=msg['imageUrl'],
                 title=msg['title'],
-                text=msg['description'],
+                text=msg['subtitle'],
                 actions=[
                     MessageTemplateAction(
                         label='說明/description',
