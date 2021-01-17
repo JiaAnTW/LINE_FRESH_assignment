@@ -3,7 +3,7 @@
         {
             "title": "SurveyCake - 前端實習生",
             "subtitle": "2020.07-2020.01",
-            "description": "測試的內容",
+            "description": "SurveyCake 為台灣市占率最高的線上問卷製作平台。\n\n在SurveyCake期間，我的工作內容是用 Typescript、Javascript ES7、React.js、JQuery 進行 SurveyCake 前端工程的開發與維護。\n\n以下是我在SurveyCake的主要產出:\n\n[2020年8~10月]\n為SurveyCake前端hotfix更版issue的主要負責人，在3~4次的更版中超過80%的issue都是由我解決。\n\n[2020年11月~2021年1月間]\n從零開始一人以Gitlab CI/CD、Node.js、Nightwatch.js建置並以Page Object設計了 SurveyCake 自動化 E2E 測試的專案架構。",
             "imageUrl": "https://www.surveycake.com/s/share-image.png",
             "link": "https://www.surveycake.com/tw/"
         }
