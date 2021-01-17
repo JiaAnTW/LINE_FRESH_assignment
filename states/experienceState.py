@@ -2,7 +2,7 @@ import json
 import sys
 from pathlib import Path
 
-from states import state, indexState
+from states import state, indexState, textState
 from utils.createCarouselMsg import createCarouselMsg
 
 
@@ -17,8 +17,14 @@ class ExperienceState(state.State):
     def get_next_state_by_reply(self, user_reply):
         if user_reply == '返回/back':
             return indexState.IndexState()
-        else:
-            return ExperienceState()
+        for singleInfo in self.info:
+            if(user_reply.startswith(singleInfo["title"])):
+                return textState.TextState(
+                    text=singleInfo["description"],
+                    before_state=ExperienceState()
+                )
+        # Exception handle
+        return ExperienceState()
 
     def loadJsonData(self):
         path = Path(__file__).parent / "./wording/experience.json"

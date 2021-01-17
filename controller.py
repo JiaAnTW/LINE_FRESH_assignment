@@ -10,24 +10,32 @@ class Controller:
         self.init_state = indexState.IndexState()
 
     def set_init_state(self, state):
-        self.setState(state)
+        self.set_state(state)
         self.initState = state
 
-    def setState(self, nextState):
+    def set_state(self, nextState):
         try:
             self.state = nextState
         except:
             self.app.logger.info("[controller.py] SetState Error")
             abort(400)
 
-    def send_msg(self, reply_token, reply_text):
+    def send_msg(self, user_id, reply_token, reply_text):
         try:
-            self.setState(self.state.get_next_state_by_reply(reply_text))
+            self.set_state(self.state.get_next_state_by_reply(reply_text))
+
             self.line_bot_api.reply_message(
                 reply_token, self.state.get_msg()
             )
 
+            # life cycle function. similar to componentDidMount in React.js
+            self.state.message_did_send(
+                controller=self,
+                user_id=user_id,
+                reply_token=reply_token,
+            )
+
         except Exception as e:
             self.app.logger.info("[controller.py] " + str(e))
-            self.setState(self.init_state)
+            self.set_state(indexState.IndexState())
             abort(400)
