@@ -23,8 +23,8 @@ class TextState(state.State):
         pass
 
     def message_did_send(self, controller, user_id, reply_token):
-        time.sleep(2)
         controller.set_state(self.before_state)
+        time.sleep(2)
         controller.line_bot_api.push_message(
             user_id,
             self.before_state.get_msg()
