@@ -7,7 +7,8 @@ from utils.createCarouselMsg import createCarouselMsg
 
 
 class ExperienceState(state.State):
-    def __init__(self):
+    def __init__(self, wording_path):
+        self.wording_path = wording_path
         self.info = self.loadJsonData()['data']
         self._msg = createCarouselMsg(self.info)
 
@@ -21,13 +22,13 @@ class ExperienceState(state.State):
             if(user_reply.startswith(singleInfo["title"])):
                 return textState.TextState(
                     text=singleInfo["description"],
-                    before_state=ExperienceState()
+                    before_state=ExperienceState(self.wording_path)
                 )
         # Exception handle
-        return ExperienceState()
+        return ExperienceState(self.wording_path)
 
     def loadJsonData(self):
-        path = Path(__file__).parent / "./wording/experience.json"
+        path = Path(__file__).parent / self.wording_path
         try:
             with open(path, encoding='utf-8') as f:
                 data = json.load(f)
