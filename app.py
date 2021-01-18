@@ -1,10 +1,10 @@
 import os
 import sys
 from dotenv import load_dotenv
-from flask import Flask, jsonify, request, abort
+from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookParser
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage, TextSendMessage
+from linebot.models import MessageEvent, TextMessage
 
 from controller import Controller
 from states.indexState import IndexState
@@ -31,7 +31,7 @@ parser = WebhookParser(channel_secret)
 # 初始化Controller
 init_state = IndexState()
 controller = Controller(app=app, line_bot_api=line_bot_api)
-controller.set_init_state(init_state)
+controller.set_state(init_state)
 
 
 @app.route("/callback", methods=["POST"])
@@ -51,10 +51,12 @@ def callback():
         if not isinstance(event.message, TextMessage):
             continue
 
+        # 所有的訊息都由controller統一處理
         controller.send_msg(
             user_id=event.source.user_id,
             reply_token=event.reply_token,
-            reply_text=event.message.text)
+            reply_text=event.message.text
+        )
 
     return "OK"
 
