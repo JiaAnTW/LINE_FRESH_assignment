@@ -1,0 +1,25 @@
+{
+    "data": [
+        {
+            "title": "從比入門再往前一點開始，一直到深入 React.js",
+            "subtitle": "第12屆IT智慧邦鐵人賽",
+            "description": "撰寫《從比入門再往前一點開始，一直到深入 React.js》系列文章，強調 Design Pattern 和 Functional Component 的觀念及 React 效能處理方式。",
+            "imageUrl": "https://i.imgur.com/hbAB2OV.jpg",
+            "link": "https://reurl.cc/D6j2AO"
+        },
+        {
+            "title": "有關前端技術的那些UX事 - 口罩地圖篇(GIS)",
+            "subtitle": "Medium",
+            "description": "記錄自己在製作口罩地圖時，提出可以搭配資料結構和現有 API 來解決效能問題的方法，獲得了國內數家小型技術週報分享，如:Starrokect第222期, TechBridge第226期。",
+            "imageUrl": "https://i.imgur.com/3bfPJvZ.jpg",
+            "link": "https://reurl.cc/R1qVqz"
+        },
+        {
+            "title": "在資工系作業導入PM和UI設計的前端工程師，會成功嗎?",
+            "subtitle": "Medium",
+            "description": "記錄在和其他三位成大資工系同學於課堂作業一起製作Android App時，如何從軟體架構、產品管理、UI設計的角度來幫助團隊合作。",
+            "imageUrl": "https://i.imgur.com/e4u4ddE.jpg",
+            "link": "https://reurl.cc/Q3RqX0"
+        }
+    ]
+}

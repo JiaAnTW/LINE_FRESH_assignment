@@ -1,0 +1,32 @@
+{
+    "data": [
+        {
+            "title": "NCKUTRANS 成大轉系生心得平台",
+            "subtitle": "Javascript (React.js + Redux), PHP (Laravel), MySQL",
+            "description": "自己獨力包辦前後端開發、設計的網站，現今每月有數百位成大學生使用",
+            "imageUrl": "https://raw.githubusercontent.com/JiaAnTW/jiaantw.github.io/master/images/project/nckutrans/header.png",
+            "link": "https://reurl.cc/n0N3Z8"
+        },
+        {
+            "title": "LINE Number Taker - 用LIFF打造的號碼牌系統",
+            "subtitle": "LIFF, LINE LOGIN, LINE Message API, Javascript, Python",
+            "description": "自己參賽 LINE FRESH 2020 校園競賽黑客松組的作品，整合 Docker、LINE 各項開發者工具打造出一款電子號碼牌系統。",
+            "imageUrl": "https://i.imgur.com/CRBfLdf.jpg",
+            "link": "https://reurl.cc/x0aml5"
+        },
+        {
+            "title": "電子發票帳本",
+            "subtitle": "Java(Android Studio), Node.js, Go",
+            "description": "和其他三位成大資工系同學於課堂作業一起製作的 Android App，我在其中負責架構設計、前後端核心開發。\n\n在這份專案中，我導入了 Design Pattern、部份業界產品管理及敏捷開發的 scrum 概念來幫助團隊合作，開發過程也撰寫成了 Medium 文章。(由於使用的網域 nctu.me 停止營運，此 app 目前無法正常運作)",
+            "imageUrl": "https://miro.medium.com/max/2700/1*LtUrTLctEGMtxd1axpx7tw.png",
+            "link": "https://play.google.com/store/apps/details?id=com.invcount.invaccounting"
+        },
+        {
+            "title": "無人餐廳點餐系統",
+            "subtitle": "LINE PAY, Javascript (Vue.js), Node.js, MySQL",
+            "description": "和一位工設系設計師、其他三位成大電機系同學於課堂作業一起製作的網頁(以 iphone6 規格製作，無 RWD)，目標是為一家無人餐廳業者打造點餐系統。我在其中負責後端開發、前端Controller開發、串接 LINE PAY 金流。",
+            "imageUrl": "https://i.imgur.com/cO91RJ3.jpg",
+            "link": "https://reurl.cc/3LXneV"
+        }
+    ]
+}

@@ -7,5 +7,9 @@ class State(ABC):
     def get_msg(self):
         pass
 
-    def get_next_state(self):
+    @abstractmethod
+    def get_next_state_by_reply(self):
+        pass
+
+    def message_did_send(self, controller, user_id, reply_token):
         pass
