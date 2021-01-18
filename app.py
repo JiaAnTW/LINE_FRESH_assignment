@@ -31,7 +31,7 @@ parser = WebhookParser(channel_secret)
 # 初始化Controller
 init_state = IndexState()
 controller = Controller(app=app, line_bot_api=line_bot_api)
-controller.set_init_state(init_state)
+controller.set_state(init_state)
 
 
 @app.route("/callback", methods=["POST"])
@@ -51,6 +51,7 @@ def callback():
         if not isinstance(event.message, TextMessage):
             continue
 
+        # 所有的訊息都由controller統一處理
         controller.send_msg(
             user_id=event.source.user_id,
             reply_token=event.reply_token,
