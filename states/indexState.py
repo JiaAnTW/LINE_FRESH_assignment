@@ -4,7 +4,7 @@ from linebot.models import MessageTemplateAction, ButtonsTemplate, TemplateSendM
 
 class IndexState(state.State):
     def __init__(self):
-        self.intro_msg = "大二從交管系平轉至資工系後開始自學網頁前後端開發，接觸 React.js 兩年。目前主攻web/App 等軟體開發技術，是個 70%前端、30%後端的產品開發者。 偶爾會研究和產品開發相關的知識，如 UI/UX、產品管理、簡報設計等。"
+        self.intro_msg = "Hi, 我是張家銨，目前就讀於成大資工四年級，預計2021年6月畢業。\n\n大二從交管系平轉至資工系後開始自學網頁前後端開發，接觸 React.js 兩年。目前主攻web/App 等軟體開發技術，是個 70%前端、30%後端的產品開發者。 偶爾會研究和產品開發相關的知識，如 UI/UX、產品管理、簡報設計等。\n\n近期正在進修Design Pattern, Clean Code, 系統架構等軟體設計知識。"
         self._msg = TemplateSendMessage(
             alt_text='張家銨 LINE FRESH',
             template=ButtonsTemplate(

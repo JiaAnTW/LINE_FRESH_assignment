@@ -3,7 +3,7 @@
         {
             "title": "從比入門再往前一點開始，一直到深入 React.js",
             "subtitle": "第12屆IT智慧邦鐵人賽",
-            "description": "撰寫《從比入門再往前一點開始，一直到深入 React.js》系列文章，強調 Design Pattern 和 Functional Component 的觀念及 React 效能處理方式。",
+            "description": "《從比入門再往前一點開始，一直到深入 React.js》是我參賽第12屆IT智慧邦鐵人賽的系列文章。從原生Javascript的模組化帶領讀者理解為何需要前端框架，並強調 Function Component 的 hook 觀念及 React 中的效能處理方式。\n\n此系列文章預計於2021下半年與深智出版社合作推出實體書。",
             "imageUrl": "https://i.imgur.com/hbAB2OV.jpg",
             "link": "https://reurl.cc/D6j2AO"
         },
