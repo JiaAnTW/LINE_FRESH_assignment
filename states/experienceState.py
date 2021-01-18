@@ -21,7 +21,9 @@ class ExperienceState(state.State):
         for singleInfo in self.info:
             if(user_reply.startswith(singleInfo["title"])):
                 return textState.TextState(
-                    text=singleInfo["description"],
+                    text="#" +
+                    singleInfo["title"]+"\n\n" +
+                    singleInfo["description"],
                     before_state=ExperienceState(self.wording_path)
                 )
         # Exception handle
