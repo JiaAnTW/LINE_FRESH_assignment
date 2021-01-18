@@ -1,10 +1,10 @@
 import os
 import sys
 from dotenv import load_dotenv
-from flask import Flask, jsonify, request, abort
+from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookParser
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage, TextSendMessage
+from linebot.models import MessageEvent, TextMessage
 
 from controller import Controller
 from states.indexState import IndexState
@@ -54,7 +54,8 @@ def callback():
         controller.send_msg(
             user_id=event.source.user_id,
             reply_token=event.reply_token,
-            reply_text=event.message.text)
+            reply_text=event.message.text
+        )
 
     return "OK"
 

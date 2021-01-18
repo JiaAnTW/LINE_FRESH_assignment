@@ -1,13 +1,8 @@
-from states import state, experienceState
-from linebot.models import TextSendMessage
 import time
 import re
 
-
-def _cut_text(self, text, lenth):
-    textArr = re.findall('.{'+str(lenth)+'}', text)
-    textArr.append(text[(len(textArr)*lenth):])
-    return textArr
+from states import state, experienceState
+from linebot.models import TextSendMessage
 
 
 class TextState(state.State):
