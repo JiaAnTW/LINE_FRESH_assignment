@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-# 登入類別
 
 
 class State(ABC):

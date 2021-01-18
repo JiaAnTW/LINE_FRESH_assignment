@@ -1,22 +1,22 @@
 from linebot.models import MessageTemplateAction, URITemplateAction, TemplateSendMessage, CarouselTemplate, CarouselColumn
 
 
-def createCarouselMsg(msgArr):
+def createCarouselMsg(infoArr):
     outputMsg = []
-    for msg in msgArr:
+    for title, info in infoArr.items():
         outputMsg.append(
             CarouselColumn(
-                thumbnail_image_url=msg['imageUrl'],
-                title=msg['title'],
-                text=msg['subtitle'],
+                thumbnail_image_url=info['imageUrl'],
+                title=title,
+                text=info['subtitle'],
                 actions=[
                     MessageTemplateAction(
                         label='說明/description',
-                        text=msg['title']+'的說明'
+                        text=title
                     ),
                     URITemplateAction(
                         label='連結/link',
-                        uri=msg['link']
+                        uri=info['link']
                     ),
                     MessageTemplateAction(
                         label='返回/back',
