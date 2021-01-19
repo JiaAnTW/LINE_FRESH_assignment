@@ -4,7 +4,7 @@
 
 ![](./doc/qrcode.png)
 ## Install
-環境請參考Pipfile
+環境請參考Pipfile，並將 `.env.sample`複製、重新命名為 `.env` 後填入對應資訊。
 ```bash
 pip install pipenv
 pipenv install
